@@ -1,95 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-    </head>
-    <body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plato Fuerte</title>
+    <link rel="shortcut icon" href="./assets/logo-fondo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+        <a href="#">
+            <img src="./assets/logo-plato-fuerte.png" alt="Logo Proyecto" class="logo">
+        </a>
         <nav>
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="./pages/nostros.html">Nostros</a>
+                    <a href="./pages/ubicacion.html">Ubicaciones</a>
                 </li>
                 <li>
                     <a href="./pages/productos.html">Productos</a>
                 </li>
                 <li>
-                    <a href="./pages/ubicacion.html">Ubicación</a>
+                    <a href="./pages/nosotros.html">Nosotros</a>
                 </li>
                 <li>
-                    <a href="./pages/contacto.html">Contacto</a>
+                    <a href="./pages/contacto.html">Contactanos</a>
                 </li>
             </ul>
         </nav>
-        <!--Aca va a ir un fondo-->
-        <header>
-            <h1>Hola mundo</h1>
-            <h2>Hola mundo</h2>
-            <h3>Hola mundo</h3>
-            <h4>Hola mundo</h4>
-        </header>
-        <main>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti minus facere quia accusantium modi. At beatae quo maxime consequuntur vitae omnis ipsa voluptatibus in rem quia, sunt doloribus laudantium dignissimos.
-                Explicabo eveniet, nulla, aliquid magnam consequuntur sunt deleniti ex velit animi quisquam corporis. Porro minima labore tempora beatae nobis. Dignissimos nihil eaque aliquid animi, deleniti quas doloremque suscipit assumenda? Atque.
-                Quod alias impedit similique iste, quam officia quibusdam voluptas blanditiis, reiciendis eligendi tempora omnis illum dolorum repellendus itaque earum quaerat nemo quos fuga rem quis. Inventore assumenda eum iure deleniti?
-            </p>
-        </main>
-        <section>
-            <div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, tempora temporibus minima qui itaque sunt cupiditate, autem in animi sit quisquam voluptates reprehenderit sed nemo? Sint blanditiis culpa natus nihil?
-                    Amet harum itaque, dignissimos recusandae deserunt accusamus nam quam? Inventore odit quam id ratione, ea veritatis? Optio rem sequi, odio nesciunt reiciendis provident consequuntur. Impedit non voluptatem minima id alias.
-                </p>
-            </div>
-        </section>
-        <article>
-            <img src="./assets/bariloche.png" alt="">
+    </header>
+
+    <main class="home">
+        <h1>Plato Fuerte</h1>
+
+        <section class="hero">
+            <h2>Buenos Aires</h2>
             <figure>
-                <img src="./assets/jujuy.png" alt="">
-                <figcaption>
-                    Paisajes hermosos del norte Argentino
-                </figcaption>
+                <img src="./assets/bsas/buenos-aires.png" alt="">
+                <figcaption>La ciudad que se disfruta con cada bocado</figcaption>
             </figure>
-            <video controls type="video/mp4" src="./assets/mendoza-turismo-gastronomico.mp4"></video>
-        </article>
-        <section>
-            <h3>Completá el formulario para escribirme.</h3>
-            <form action="#" method="get">
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input
-                        id="nombre"
-                        name="nombre"
-                        required
-                    >
-                    </div>
-                <div>
-                    <label for="email">Correo electrónico</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                    >
-                </div>
-                <div>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea
-                        id="mensaje"
-                        name="mensaje"
-                        rows="10"
-                    >
-                    </textarea>
-                </div>
-                <button type="submit">
-                    Enviar
-                </button>
-            </form>
+
+            <figure>
+                <img src="./assets/bsas/pizzada.webp" alt="">
+
+            </figure>
         </section>
-    </body>
+
+        <section class="home-sabores">
+            <h2>Sabores que representan la ciudad</h2>
+            <figure>
+                <img src="./assets/bsas/cafeteria.webp" alt="">
+            </figure>
+            <figure>
+                <img src="./assets/bsas/pizza.webp" alt="">
+            </figure>
+            <figure>
+                <img src="./assets/bsas/asado.webp" alt="">
+            </figure>
+        </section>
+
+        <section class="cultura">
+            <h2>Una ciudad, tres culturas</h2>
+            <figure>
+                <img src="./assets/bsas/flags.webp" alt="">
+                <figcaption>La gastronomía argentina está profundamente influenciada por las culturas española e italiana, cuyas tradiciones llegaron con las grandes oleadas migratorias. De España heredamos platos como las tortillas, los guisos, las empanadas y el uso del aceite de oliva. La inmigración italiana popularizó las pastas, las pizzas, los ñoquis y las milanesas. Estas costumbres se fusionaron con los ingredientes y las tradiciones locales, dando origen a una identidad culinaria propia. Hoy, el asado, las pastas del domingo y la pizza al molde son ejemplos de cómo ambas culturas forman parte de la mesa argentina.</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desarrollado por Aye y Lucho</p>
+        <p>2026 &copy; Derechos Reservados</p>
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="./assets/logos/instagram.png" alt="Logo Instagram" class="rrss">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="./assets/logos/facebook.png" alt="Logo Facebook" class="rrss">
+                </a>
+            </li>
+            <li>
+                <a href="https://x.com/" target="_blank">
+                    <img src="./assets/logos/x.png" alt="Logo de X(Twitter)" class="rrss">
+                </a>
+            </li>
+            <li>
+                <a href="http://wa.me/1122334455" target="_blank">
+                    <img src="./assets/logos/whatsapp.png" alt="Logo de WhatsApp" class="rrss whatsapp">
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
 </html>

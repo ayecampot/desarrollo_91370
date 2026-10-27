@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --font-ppal: Lobster, sans-serif;
+    --font-sec: Montserrat, sans-serif;
+    --headings: #1D3557;
+    --text: #3D4856;
+    --accent: #C76D3A;
+    --bg-ppal: #F1FAEE;
+    --bg-sec: #D8E4DF;
+}
+/* RESET */
+body{
+    background-color: var(--bg-ppal);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-ppal);
+    color: var(--headings);
+}
+
+p{
+    font-family: var(--font-sec);
+    font-weight: 600;
+    color: var(--text);
+}
+/* HEADER */
+.logo{
+    height: 10vh;
+    width: auto;
+}
+.rrss{
+    height: 5vh;
+    width: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: var(--font-sec);
+    color: var(--headings);
+    font-weight: 600;
+}
+/* FOOTER */
+
+/* HOME */
+
+.home img{
+    width: 25vw;
+    height: auto;
+}
+
+/* UBICACIONES */
