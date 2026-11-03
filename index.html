@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <a href="#">
             <img src="./assets/logo-plato-fuerte.png" alt="Logo Proyecto" class="logo">
         </a>
-        <nav>
+        <nav class="navbar">
             <ul>
                 <li>
-                    <a href="./pages/ubicacion.html">Ubicaciones</a>
+                    <a href="./pages/bari.html">Bariloche</a>
                 </li>
                 <li>
-                    <a href="./pages/productos.html">Productos</a>
+                    <a href="./pages/jujuy.html">Jujuy</a>
                 </li>
                 <li>
                     <a href="./pages/nosotros.html">Nosotros</a>
@@ -31,46 +31,107 @@
     </header>
 
     <main class="home">
-        <h1>Plato Fuerte</h1>
-
         <section class="hero">
-            <h2>Buenos Aires</h2>
-            <figure>
-                <img src="./assets/bsas/buenos-aires.png" alt="">
-                <figcaption>La ciudad que se disfruta con cada bocado</figcaption>
-            </figure>
+            <div class="hero-texto">
+                <h1>Plato Fuerte</h1>
+                <h2>Buenos Aires</h2>
+                <p>La ciudad que se disfruta con cada bocado.</p>
+                <a href="#sabores" class="hero-boton">Explorar</a>
+            </div>
 
-            <figure>
-                <img src="./assets/bsas/pizzada.webp" alt="">
-
+            <figure class="hero-imagen">
+                <img
+                    src="./assets/bsas/pizzada.webp"
+                    alt="Gastronomía porteña"
+                >
             </figure>
         </section>
 
         <section class="home-sabores">
             <h2>Sabores que representan la ciudad</h2>
-            <figure>
-                <img src="./assets/bsas/cafeteria.webp" alt="">
-            </figure>
-            <figure>
-                <img src="./assets/bsas/pizza.webp" alt="">
-            </figure>
-            <figure>
-                <img src="./assets/bsas/asado.webp" alt="">
-            </figure>
-        </section>
 
+            <div class="cards">
+                <article class="card">
+                    <img
+                        src="./assets/bsas/cafeteria.webp"
+                        alt="Cafetería de Buenos Aires"
+                    >
+                    <div class="card-contenido">
+                        <h3>Cafeterías</h3>
+                        <p>
+                            La tradición del café porteño,
+                            sus bares históricos y las medialunas.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img
+                        src="./assets/bsas/pizza.webp"
+                        alt="Pizza tradicional de Buenos Aires"
+                    >
+                    <div class="card-contenido">
+                        <h3>Pizza porteña</h3>
+                        <p>
+                            Una de las grandes tradiciones
+                            gastronómicas de la ciudad.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img
+                        src="./assets/bsas/asado.webp"
+                        alt="Asado argentino a la parrilla"
+                    >
+                    <div class="card-contenido">
+                        <h3>Asado argentino</h3>
+                        <p>
+                            Un ritual gastronómico que reúne
+                            a familiares y amigos.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
         <section class="cultura">
             <h2>Una ciudad, tres culturas</h2>
-            <figure>
-                <img src="./assets/bsas/flags.webp" alt="">
-                <figcaption>La gastronomía argentina está profundamente influenciada por las culturas española e italiana, cuyas tradiciones llegaron con las grandes oleadas migratorias. De España heredamos platos como las tortillas, los guisos, las empanadas y el uso del aceite de oliva. La inmigración italiana popularizó las pastas, las pizzas, los ñoquis y las milanesas. Estas costumbres se fusionaron con los ingredientes y las tradiciones locales, dando origen a una identidad culinaria propia. Hoy, el asado, las pastas del domingo y la pizza al molde son ejemplos de cómo ambas culturas forman parte de la mesa argentina.</figcaption>
-            </figure>
+
+            <div class="cultura-contenido">
+                <img
+                    src="./assets/bsas/flags.webp"
+                    alt="Banderas de España, Argentina e Italia"
+                >
+
+                <div class="cultura-texto">
+                    <p>
+                        La gastronomía argentina está profundamente
+                        influenciada por las culturas española e italiana,
+                        cuyas tradiciones llegaron con las grandes
+                        oleadas migratorias.
+                    </p>
+
+                    <p>
+                        De España heredamos los guisos y las empanadas.
+                        La inmigración italiana popularizó las pastas,
+                        las pizzas, los ñoquis y las milanesas.
+                    </p>
+
+                    <p>
+                        Estas costumbres se fusionaron con ingredientes
+                        y tradiciones locales, dando origen a una
+                        identidad culinaria propia.
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>Desarrollado por Aye y Lucho</p>
-        <p>2026 &copy; Derechos Reservados</p>
+    <footer class="footer">
+        <div>
+            <p>Desarrollado por Aye y Lucho</p>
+            <p>2026 &copy; Derechos Reservados</p>
+        </div>
         <ul>
             <li>
                 <a href="https://www.instagram.com/" target="_blank">
@@ -87,12 +148,19 @@
                     <img src="./assets/logos/x.png" alt="Logo de X(Twitter)" class="rrss">
                 </a>
             </li>
-            <li>
-                <a href="http://wa.me/1122334455" target="_blank">
-                    <img src="./assets/logos/whatsapp.png" alt="Logo de WhatsApp" class="rrss whatsapp">
-                </a>
-            </li>
         </ul>
     </footer>
+
+    <div class="whatsapp-flotante">
+        <a
+            href="https://wa.me/5491122334455"
+            target="_blank"
+            rel="noopener"
+            class="whatsapp-flotante"
+            aria-label="Contactanos por WhatsApp"
+            >
+            <img src="./assets/logos/whatsapp.png" alt="">
+        </a>
+    </div>
 </body>
 </html>
