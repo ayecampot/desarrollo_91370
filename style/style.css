@@ -10,7 +10,6 @@
     --bg-sec: #D8E4DF;
 }
 /* RESET */
-
 *{
     margin: 0;
     padding:0;
@@ -31,6 +30,10 @@ h1{
 }
 
 h2{
+    font-size: 2.5rem;
+}
+
+h3{
     font-size: 2rem;
 }
 
@@ -38,27 +41,12 @@ p{
     font-family: var(--font-sec);
     font-weight: 600;
     color: var(--text);
+    font-size: 1rem;
+}
+main{
+    padding: 0 50px;
 }
 /* HEADER */
-.logo{
-    height: 10vh;
-    width: auto;
-}
-.rrss{
-    height: 5vh;
-    width: auto;
-}
-
-ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-    font-family: var(--font-sec);
-    color: var(--headings);
-    font-weight: 600;
-}
 
 .header{
     background-color:var(--bg-sec);
@@ -79,6 +67,62 @@ a{
     gap: 20px;
 }
 
+.logo{
+    height: 10vh;
+    width: auto;
+}
+.rrss{
+    height: 5vh;
+    width: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: var(--font-sec);
+    color: var(--headings);
+    font-weight: 600;
+}
+
+/* FOOTER */
+
+.footer{
+    background-color:var(--headings);
+    margin-top: 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer ul{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer p{
+    color: var(--bg-ppal);
+    padding-bottom: 5px;
+    font-weight: 300;
+}
+
+.whatsapp-flotante{
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+}
+
+.whatsapp{
+    width: 6vw;
+    height: auto;
+}
 /* HERO */
 
 .hero{
@@ -97,7 +141,6 @@ a{
     align-items: flex-start;
     justify-content: center;
     padding-left: 2rem;
-
 }
 
 .hero-imagen{
@@ -121,7 +164,6 @@ a{
     color: var(--bg-ppal);
     border-radius: 6px;
     margin-top: 1rem;
-
 }
 
 /* CARDS */
@@ -156,13 +198,18 @@ a{
 }
 
 .cultura-contenido{
-    padding: 15px 0 15px 0;
+    padding: 15px 0 15px 15px;
     background-color: var(--bg-sec);
     display: flex;
     justify-content: center;
     gap: 20px
 }
 
+.cultura-contenido img{
+    width: 25vw;
+    height: auto;
+    border-radius: 25px;
+}
 
 .cultura-texto{
     display: flex;
@@ -170,48 +217,278 @@ a{
     justify-content: center;
 }
 
-.footer{
-    background-color:var(--headings);
-    margin-top: 3rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-.footer ul{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 
-.footer div{
+/*  */
+/* SOBRE NOSOTRS */
+/*  */
+
+.main-us{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 25px;
 }
-
-.footer div p{
-    color: var(--bg-ppal);
-    padding-bottom: 5px;
-    font-weight: 300;
+.img-about{
+    width: 35vw;
+    height: auto;
+    border-radius: 25px;
 }
-
-.whatsapp-flotante{
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 1000;
+.banner{
+    width: 75vw;
 }
-
-
-.home img{
+.img-grid{
     width: 25vw;
     height: auto;
+    border-radius: 25px;
 }
 
-.whatsapp-flotante img{
-    display: block;
-    width: 4vw;
-    height: auto;
+.grid-text{
+    display: grid;
+    grid-template-areas:
+    "img1 ." 
+    "img1 sub1" 
+    "img1 p1" 
+    "img1 ." 
+    "sub2 img2" 
+    "p2 img2" 
+    "sub3 img2" 
+    "p3 img2" 
+    "img3 ." 
+    "img3 sub4" 
+    "img3 p4" 
+    "img3 ." 
+    "img4 img4" 
+    ;
+    justify-items: center;
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 40px;
+    text-align: center;
+}
+.grid-text p{
+    padding: 0 75px;
+    font-size: 1.25rem;
 }
 
+.img-us-grid{
+    grid-area: img1;
+}
+.subtitle-trip{
+    grid-area: sub1;
+}
+.p-story{
+    grid-area: p1;
+}
+.img-1-grid{
+    grid-area: img2;
+}
+.subtitle-filo{
+    grid-area: sub2;
+}
+.p-culture{
+    grid-area: p2;
+}
+.subtitle-diference{
+    grid-area: sub3;
+}
+.p-offering{
+    grid-area: p3;
+}
+.img-2-grid{
+    grid-area: img3;
+}
+.subtitle-inv{
+    grid-area: sub4;
+}
+.p-end{
+    grid-area: p4;
+}
+.img-3-grid{
+    grid-area: img4;
+}
+
+/* GRID COLUMNS Y ROWS */
+
+.grid-img{
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
+    column-gap: 100px;
+    row-gap: 25px;
+}
+/* FILA 1 */
+.bsas{
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+}
+.cafe{
+    grid-row: 1 / 3;
+    grid-column: 3 / 5;
+}
+.mza{
+    grid-row: 1 / 3;
+    grid-column: 5 / 7;
+}
+/* FILA 2 */
+.emp{
+    grid-row: 3 / 5;
+    grid-column: 1 / 3;
+}
+.glogo{
+    grid-row: 3 / 5;
+    grid-column: 3 / 5;
+}
+.asado{
+    grid-row: 3 / 5;
+    grid-column: 5 / 7;
+}
+/* FILA 3 */
+.jujuy{
+    grid-row: 5 / 7;
+    grid-column: 1 / 3;
+}
+.choco{
+    grid-row: 5 / 7;
+    grid-column: 3 / 5;
+}
+.bari{
+    grid-row: 5 / 7;
+    grid-column: 5 / 7;
+}
+
+/* MEDIA QUERIES */
+/* MINIMO Y MAXIMO */
+/* TABLET */
+@media (min-width: 568px) and (max-width: 991px){
+    /* HEADER */
+    .header{
+        justify-content: space-around;
+    }
+    /* HOME */
+    .cards{
+        gap: 25px;
+    }
+    .cultura-contenido img{
+        width: 40vw;
+    }
+    /* NOSOTROS */
+    .grid-text{
+        display: flex;
+        flex-direction: column;
+    }
+    .img-about{
+        width: 75%;
+    }
+    .banner{
+        width: 100%;
+    }
+    .grid-img{
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img-grid{
+        width: 100%;
+    }
+    .bsas{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .cafe{
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+    .mza{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .emp{
+        grid-row: 4/5;
+        grid-column: 2/3;
+    }
+    .glogo{
+        grid-row: 3/4;
+        grid-column: 1/3;
+        width: 30%;
+    }
+    .asado{
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    .jujuy{
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    .choco{
+        grid-row: 5/6;
+        grid-column: 2/3;
+    }
+    .bari{
+        grid-row: 5/6;
+        grid-column: 1/2;
+    }
+}
+
+/* MOBILE */
+@media (min-width: 300px) and (max-width: 567px){
+    /* RESET */
+    h1{
+        font-size: 2.5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    /* HEADER */
+    .header{
+        flex-direction: column;
+        align-items: center;
+    }
+    /* FOOTER */
+    .footer{
+        flex-direction: column;
+        gap: 10px;
+    }
+    /* HOME */
+    .hero{
+        flex-direction: column;
+    }
+    .cards{
+        gap: 25px;
+    }
+    .cultura-contenido{
+        border-radius: 25px;
+        padding: 15px;
+        flex-direction: column;
+    }
+    .cultura-contenido img{
+        width: 100%;
+    }
+    /* SOBRE NOSOTROS */
+    .grid-text, .grid-img{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+    .grid-text p{
+        padding: 0 25px;
+    }
+    .img-about{
+        width: 75vw;
+    }
+    .banner{
+        display: none;
+    }
+    .img-grid{
+        width: 75vw;
+    }
+}
