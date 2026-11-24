@@ -4,43 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plato Fuerte</title>
-    <link rel="shortcut icon" href="./assets/logo-fondo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/logo-fondo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <header class="header">
-        <a href="../index.html">
-            <img src="../assets/logo-plato-fuerte.png" alt="Logo Proyecto" class="logo">
-        </a>
-        <nav class="navbar">
-            <ul>
-                <li>
-                    <a href="./bari.html">Bariloche</a>
-                </li>
-                <li>
-                    <a href="./jujuy.html">Jujuy</a>
-                </li>
-                <li>
-                    <a href="./nosotros.html">Nosotros</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">Contactanos</a>
-                </li>
-            </ul>
+    <header>
+        <nav class="navbar bg-plato-fuerte sticky-top">
+            <div class="container-fluid">
+                <a href="../index.html">
+                    <img src="../assets/logo-plato-fuerte.png" alt="Logo Proyecto" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav d-flex flex-column align-items-end px-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./bari.html">Bariloche</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./jujuy.html">Jujuy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main class="home">
-        <h1>Plato Fuerte</h1>
-
-        <section class="hero">
-            <figure>
-                <img src="./assets/bsas/buenos-aires.png" alt="">
-                <h2>Buenos Aires</h2>
-                <figcaption>La ciudad que se disfruta con cada bocado</figcaption>
-            </figure>
+    <main class="j-main">
+        <section class="jujuy">
+            <article class="jjy-bg">
+                <h1>Jujuy</h1>
+                <p>Sabores ancestrales del norte Argentino</p>
+            </article>
         </section>
-
+        <section class="mercado">
+            <article class="jjy-bg">
+                <h2>Mercado tradicional</h2>
+                <p>Recorré un auténtico mercado del norte argentino, donde los colores, aromas y sabores reflejan la riqueza de la cultura andina. Entre puestos de frutas, verduras, especias, maíz, papas andinas, quesos regionales, artesanías y productos típicos, cada rincón ofrece una experiencia única. Un espacio lleno de tradición, donde productores y artesanos locales mantienen vivas las costumbres de la región y comparten la esencia de su gastronomía.</p>
+            </article>
+        </section>
+        <h2>Recetas del Norte</h2>
+        <section class="j-flex">
+            <article class="j-card">
+                <h3>Empanadas Jujeñas</h3>
+                <img src="../assets/jujuy/empanadas.png" alt="" class="j-img">
+            </article>
+            <article class="j-card">
+                <h3>Humitas</h3>
+                <img src="../assets/jujuy/humitas.png" alt="" class="j-img">
+            </article>
+            <article class="j-card">
+                <h3>Tamales</h3>
+                <img src="../assets/jujuy/tamales.png" alt="" class="j-img">
+            </article>
+        </section>
     </main>
 
     <footer class="footer">
@@ -75,5 +101,6 @@
             <img src="../assets/logos/whatsapp.png" alt="" class="whatsapp">
         </a>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

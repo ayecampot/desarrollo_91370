@@ -4,43 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plato Fuerte</title>
-    <link rel="shortcut icon" href="./assets/logo-fondo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/logo-fondo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="shortcut icon" href="../assets/logo-fondo.png" type="image/x-icon">
 </head>
 <body>
-    <header class="header">
-        <a href="../index.html">
-            <img src="../assets/logo-plato-fuerte.png" alt="Logo Proyecto" class="logo">
-        </a>
-        <nav class="navbar">
-            <ul>
-                <li>
-                    <a href="./bari.html">Bariloche</a>
-                </li>
-                <li>
-                    <a href="./jujuy.html">Jujuy</a>
-                </li>
-                <li>
-                    <a href="./nosotros.html">Nosotros</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">Contactanos</a>
-                </li>
-            </ul>
+    <header>
+        <nav class="navbar bg-plato-fuerte sticky-top">
+            <div class="container-fluid">
+                <a href="../index.html">
+                    <img src="../assets/logo-plato-fuerte.png" alt="Logo Proyecto" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav d-flex flex-column align-items-end px-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./bari.html">Bariloche</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./jujuy.html">Jujuy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main class="home">
-        <h1>Plato Fuerte</h1>
-
-        <section class="hero">
-            <figure>
-                <img src="./assets/bsas/buenos-aires.png" alt="">
-                <h2>Buenos Aires</h2>
-                <figcaption>La ciudad que se disfruta con cada bocado</figcaption>
-            </figure>
+    <main>
+        <section class="bari">
+            <article class="bari-bg">
+                <h1>Bariloche</h1>
+                <p>Chocolate, cocina regional y paisajes únicos</p>
+            </article>
         </section>
-
+        <section class="bari-grid">
+            <h2>Descubri los sabores</h2>
+            <!--  -->
+            <!-- FLIP CARDS --> 
+            <!--  -->
+            <article class="bari-card">
+                <div class="flip">
+                    <div class="inner">
+                        <figure class="front"><img src="../assets/bari/choco.png" alt="Chocolate Artesanal" class="bari-grid-img a"></figure>
+                        <div class="back">
+                            <p>Disfrutá de una pausa dulce en el corazón de Bariloche, donde el aroma del café recién preparado se combina con deliciosas tortas artesanales. Sabores de chocolate, frutos rojos y dulces regionales se convierten en protagonistas de una merienda tradicional, ideal para disfrutar mientras contemplás los paisajes de lagos y montañas de la Patagonia.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="bari-card">
+                <div class="flip">
+                    <div class="inner">
+                        <figure class="front"><img src="../assets/bari/cerveza artesanal.png" alt="Cerveza Artesanal" class="bari-grid-img b"></figure>
+                        <div class="back">
+                            <p>Disfrutá de una auténtica experiencia gastronómica patagónica en un restaurante con vistas al majestuoso lago Nahuel Huapi. Una cerveza artesanal bien fría acompaña una tradicional picada regional de quesos, fiambres, aceitunas y panes caseros, en un entorno natural rodeado de bosques y montañas.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="bari-card">
+                <div class="flip">
+                    <div class="inner">
+                        <figure class="front"><img src="../assets/bari/trucha.png" alt="Trucha Patagonica" class="bari-grid-img c"></figure>
+                        <div class="back">
+                            <p>Una propuesta gastronómica que combina los sabores de la Patagonia con la belleza de sus paisajes. Deliciosa trucha asada, acompañada de papas doradas y vegetales frescos, junto a una copa de vino ideal para realzar sus sabores. Todo esto, frente a una espectacular vista de lagos y montañas.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="bari-card">
+                <div class="flip">
+                    <div class="inner">
+                        <figure class="front"><img src="../assets/bari/cordero.png" alt="Cordero Patagonico" class="bari-grid-img d"></figure>
+                        <div class="back">
+                            <p>Viví la tradición del auténtico asado patagónico en plena montaña. Un cordero cocinado lentamente a las brasas, mediante la técnica tradicional del asador, acompañado de sabores regionales y rodeado de imponentes paisajes cordilleranos. Una experiencia que combina gastronomía, naturaleza y cultura local.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
 
     <footer class="footer">
@@ -75,5 +127,6 @@
             <img src="../assets/logos/whatsapp.png" alt="" class="whatsapp">
         </a>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
