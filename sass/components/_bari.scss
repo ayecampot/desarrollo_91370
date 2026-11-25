@@ -1,0 +1,75 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+main{
+    .bari{
+        @extend %back-page;
+        .bari-bg{
+            @extend %back-page-bg;
+        }
+    }
+    .bari-grid{
+        margin-top: 50px;
+        display: grid;
+        grid-template-areas: "head head" "choco cerv" "trucha cord";
+        gap: 50px;
+        justify-items: center;
+        h2{grid-area: head;}
+        .a{grid-area: choco;}
+        .b{grid-area: cerv;}
+        .c{grid-area: trucha;}
+        .d{grid-area: cord;}
+        // 
+        // FLIP CARD
+        // 
+        .bari-card{
+            width: 80%;
+            text-align: center;
+            border: 2px solid v.$accent;
+            border-radius: 15px;
+            .flip{
+                width: 100%;
+                height: 40vh;
+                perspective: 1000px;
+                &:hover .inner{transform: rotateY(180deg);}
+                @include m.mobile{
+                    height: 50vh;
+                }
+                .inner{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    transition: transform 1s ease;
+                    transform-style: preserve-3d;
+                    .front, .back{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        backface-visibility: hidden;
+                        border-radius: 15px;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .back{
+                        transform: rotateY(180deg);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 1rem;
+                        background-color: v.$bg-ppal;
+                        color: v.$text;
+                    }
+                }
+            }
+        }
+    }
+    @include m.mobile{
+        .bari-grid{
+            @include m.flex(column,center,center,20px);
+        }
+    }
+}

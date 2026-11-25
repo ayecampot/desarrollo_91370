@@ -1,0 +1,32 @@
+@use "../utilities/variables" as v;
+
+header{
+    position: sticky;
+    top: 0;
+    .logo{
+        height: 10vh;
+        width: auto;
+    }
+    .bg-plato-fuerte{
+        background-color: v.$bg-ppal;
+    }
+    .navbar.bg-plato-fuerte > .container-fluid{
+        position: relative;
+    }
+    .navbar.bg-plato-fuerte #navbarNav{
+        position: absolute;
+        top: 100%;
+        left: auto;
+        right: 0;
+        z-index: 1030;
+        width: max-content;
+        padding: 2rem;
+        background-color: transparent;
+    }
+    .navbar.bg-plato-fuerte #navbarNav.show{
+        background-color: v.$bg-ppal;
+    }
+    .active{
+        font-weight: bolder;
+    }
+}

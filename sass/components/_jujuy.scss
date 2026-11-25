@@ -1,0 +1,45 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.j-main{
+    @include m.flex(column,center,center,0);
+    .jujuy{
+        @extend %back-page;
+        background-image: url(../../assets/jujuy/jujuy.png);
+        .jjy-bg{
+            @extend %back-page-bg;
+        }
+    }
+    .mercado{
+        margin: 50px 0;
+        @extend %back-page;
+        background-image: url(../../assets/jujuy/mercado.webp);
+        background-size: cover;
+        .jjy-bg{
+            @extend %back-page-bg;
+            padding: 10px;
+        }
+    }
+    .j-flex{
+        @include m.flex(row,space-around,center,0);
+        .j-card{
+            width: 30%;
+            height: auto;
+            @include m.flex(column,start,center,0);
+            .j-img{
+                border-radius: 25px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    @include m.mobile{
+        .jujuy{background-size: cover;}
+        .mercado{height: 150vh;}
+        .j-flex{
+            flex-direction: column;
+            gap: 25px;
+            .j-card{width: 100%;}
+        }
+    }
+}

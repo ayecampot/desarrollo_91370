@@ -1,658 +1,424 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-:root{
-    --font-ppal: Lobster, sans-serif;
-    --font-sec: Montserrat, sans-serif;
-    --headings: #1D3557;
-    --text: #3D4856;
-    --accent: #C76D3A;
-    --bg-ppal: #F1FAEE;
-    --bg-sec: #D8E4DF;
-}
-/*  */
-/* RESET */
-/*  */
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-}
-body{
-    background-color: var(--bg-ppal);
-}
-h1, h2, h3, h4, h5, h6{
-    font-family: var(--font-ppal);
-    color: var(--headings);
-}
-h1{
-    font-size: 3rem;
-}
-h2{
-    font-size: 2.5rem;
-}
-h3{
-    font-size: 2rem;
-}
-p{
-    font-family: var(--font-sec);
-    font-weight: 600;
-    color: var(--text);
-    font-size: 1rem;
-}
-main{
-    padding: 0 50px;
-}
-ul{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    font-family: var(--font-sec);
-    color: var(--headings);
-    font-weight: 600;
-}
-/*  */
-/* HEADER */
-/*  */
-.logo{
-    height: 10vh;
-    width: auto;
-}
-.bg-plato-fuerte{
-    background-color: var(--bg-ppal);
-}
-.navbar.bg-plato-fuerte > .container-fluid{
-    position: relative;
-}
-.navbar.bg-plato-fuerte #navbarNav{
-    position: absolute;
-    top: 100%;
-    left: auto;
-    right: 0;
-    z-index: 1030;
-    width: max-content;
-    padding: 2rem;
-    background-color: transparent;
-}
-.navbar.bg-plato-fuerte #navbarNav.show{
-    background-color: var(--bg-ppal);
-}
-.active{
-    font-weight: bolder;
-}
-/*  */
-/* FOOTER */
-/*  */
-.footer{
-    background-color:var(--headings);
-    margin-top: 3rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-.footer ul{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-.footer p{
-    color: var(--bg-ppal);
-    padding-bottom: 5px;
-    font-weight: 300;
-}
-.whatsapp-flotante{
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 1000;
-}
-.whatsapp{
-    width: 6vw;
-    height: auto;
-}
-.rrss{
-    height: 5vh;
-    width: auto;
-}
-/*  */
-/* HERO */
-/*  */
-.hero{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:40px;
-    padding:10px;
-    margin-top: 2rem;
-}
-.hero-texto{
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 2rem;
-}
-.hero-imagen{
-    flex:1;
-    min-width: 0;
-    margin: 0;
-}
-.home .hero-imagen img{
-    display: block;
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-    border-radius: 12px;
-}
-.hero-boton{
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: var(--accent);
-    color: var(--bg-ppal);
-    border-radius: 6px;
-    margin-top: 1rem;
-}
-/*  */
-/* CARDS */
-/*  */
-.home-sabores h2{
-    margin:2rem;
-}
-.cards{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.card{
-    flex-basis: 250px;
-    background-color: var(--bg-sec);
-    border-radius: 12px;
-}
-.card-contenido{
-    padding: 15px;
-}
-.card-contenido h3{
-    margin-bottom: 0.5rem;
-    padding: 5px;
-}
-.cultura h2{
-    margin:2rem;
-}
-.cultura-contenido{
-    padding: 15px 0 15px 15px;
-    background-color: var(--bg-sec);
-    display: flex;
-    justify-content: center;
-    gap: 20px
-}
-.cultura-contenido img{
-    width: 25vw;
-    height: auto;
-    border-radius: 25px;
-}
-.cultura-texto{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.card img{
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
-/*  */
-/* BARILOCHE */
-/*  */
-.bari{
-    width: 100%;
-    height: 70vh;
-    background-image: url(../assets/bari/bariloche.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-}
-.bari-bg{
-    width: fit-content;
-    background-color: color-mix(in srgb, var(--bg-ppal) 50%, transparent);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 15px 15px 0 0;
-}
-.bari-bg h1, .bari-bg p{
-    color: var(--headings);
-}
-/*  */
-/* FLIP CARDS */
-/*  */
-.bari-card{
-    width: 80%;
-    text-align: center;
-    border: 2px solid var(--accent);
-    border-radius: 15px;
-}
-.flip{
-    width: 100%;
-    height: 40vh;
-    perspective: 1000px;
-}
-.inner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 1s ease;
-    transform-style: preserve-3d;
-}
-.flip:hover .inner{
-    transform: rotateY(180deg);
-}
-.front, .back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    overflow: hidden;
-}
-.front img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.back{
-    transform: rotateY(180deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--bg-ppal);
-    color: var(--text);
-}
-/*  */
-.bari-grid{
-    margin-top: 50px;
-    display: grid;
-    grid-template-areas: "head head" "choco cerv" "trucha cord";
-    gap: 50px;
-    justify-items: center;
-}
-.bari-grid h2{grid-area: head;}
-.bari-grid .a{grid-area: choco;}
-.bari-grid .b{grid-area: cerv;}
-.bari-grid .c{grid-area: trucha;}
-.bari-grid .d{grid-area: cord;}
-/*  */
-/* JUJUY */
-/*  */
-.j-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.jujuy{
-    width: 100%;
-    height: 70vh;
-    background-image: url(../assets/jujuy/jujuy.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-}
-.jjy-bg{
-    width: fit-content;
-    background-color: color-mix(in srgb, var(--bg-ppal) 50%, transparent);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 15px 15px 0 0;
-    padding: 10px;
-}
-.jjy-bg h1, .jjy-bg h2, .jjy-bg p{
-    color: var(--headings);
-}
-.mercado{
-    margin: 50px 0;
-    width: 100%;
-    height: 70vh;
-    background-image: url(../assets/jujuy/mercado.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-}
-.j-flex{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.j-card{
-    width: 30%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.j-img{
-    border-radius: 25px;
-    width: 100%;
-    height: auto;
-}
-/*  */
-/* SOBRE NOSOTROS */
-/*  */
-.main-us{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-}
-.img-about{
-    width: 35vw;
-    height: auto;
-    border-radius: 25px;
-}
-.banner{
-    width: 75vw;
-}
-.img-grid{
-    width: 25vw;
-    height: auto;
-    border-radius: 25px;
-}
-.grid-text{
-    display: grid;
-    grid-template-areas:
-    "img1 ." 
-    "img1 sub1" 
-    "img1 p1" 
-    "img1 ." 
-    "sub2 img2" 
-    "p2 img2" 
-    "sub3 img2" 
-    "p3 img2" 
-    "img3 ." 
-    "img3 sub4" 
-    "img3 p4" 
-    "img3 ." 
-    "img4 img4" 
-    ;
-    justify-items: center;
-    align-items: center;
-    row-gap: 20px;
-    column-gap: 40px;
-    text-align: center;
-}
-.grid-text p{
-    padding: 0 75px;
-    font-size: 1.25rem;
-}
-.img-us-grid{
-    grid-area: img1;
-}
-.subtitle-trip{
-    grid-area: sub1;
-}
-.p-story{
-    grid-area: p1;
-}
-.img-1-grid{
-    grid-area: img2;
-}
-.subtitle-filo{
-    grid-area: sub2;
-}
-.p-culture{
-    grid-area: p2;
-}
-.subtitle-diference{
-    grid-area: sub3;
-}
-.p-offering{
-    grid-area: p3;
-}
-.img-2-grid{
-    grid-area: img3;
-}
-.subtitle-inv{
-    grid-area: sub4;
-}
-.p-end{
-    grid-area: p4;
-}
-.img-3-grid{
-    grid-area: img4;
-}
-/* GRID COLUMNS Y ROWS */
-.grid-img{
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: repeat(6, 1fr);
-    justify-items: center;
-    align-items: center;
-    column-gap: 100px;
-    row-gap: 25px;
-}
-/* FILA 1 */
-.bsas{
-    grid-row: 1 / 3;
-    grid-column: 1 / 3;
-}
-.cafe{
-    grid-row: 1 / 3;
-    grid-column: 3 / 5;
-}
-.mza{
-    grid-row: 1 / 3;
-    grid-column: 5 / 7;
-}
-/* FILA 2 */
-.emp{
-    grid-row: 3 / 5;
-    grid-column: 1 / 3;
-}
-.glogo{
-    grid-row: 3 / 5;
-    grid-column: 3 / 5;
-}
-.asado{
-    grid-row: 3 / 5;
-    grid-column: 5 / 7;
-}
-/* FILA 3 */
-.jujuy{
-    grid-row: 5 / 7;
-    grid-column: 1 / 3;
-}
-.choco{
-    grid-row: 5 / 7;
-    grid-column: 3 / 5;
-}
-.bari{
-    grid-row: 5 / 7;
-    grid-column: 5 / 7;
-}
-/*  */
-/* MEDIA QUERIES */
-/*  */
-/* TABLET */
-@media (min-width: 568px) and (max-width: 991px){
-    /* HEADER */
-    .header{
-        justify-content: space-around;
-    }
-    /*  */
-    /* HOME */
-    /*  */
-    .cards{
-        gap: 25px;
-    }
-    .cultura-contenido img{
-        width: 40vw;
-    }
-    /*  */
-    /* NOSOTROS */
-    /*  */
-    .grid-text{
-        display: flex;
-        flex-direction: column;
-    }
-    .img-about{
-        width: 75%;
-    }
-    .banner{
-        width: 100%;
-    }
-    .grid-img{
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .img-grid{
-        width: 100%;
-    }
-    .bsas{
-        grid-row: 1/2;
-        grid-column: 1/2;
-    }
-    .cafe{
-        grid-row: 1/2;
-        grid-column: 2/3;
-    }
-    .mza{
-        grid-row: 2/3;
-        grid-column: 1/2;
-    }
-    .emp{
-        grid-row: 4/5;
-        grid-column: 2/3;
-    }
-    .glogo{
-        grid-row: 3/4;
-        grid-column: 1/3;
-        width: 30%;
-    }
-    .asado{
-        grid-row: 2/3;
-        grid-column: 2/3;
-    }
-    .jujuy{
-        grid-row: 4/5;
-        grid-column: 1/2;
-    }
-    .choco{
-        grid-row: 5/6;
-        grid-column: 2/3;
-    }
-    .bari{
-        grid-row: 5/6;
-        grid-column: 1/2;
-    }
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* MOBILE */
-@media (min-width: 300px) and (max-width: 567px){
-    /* RESET */
-    h1{
-        font-size: 2.5rem;
-    }
-    h2{
-        font-size: 2rem;
-    }
-    h3{
-        font-size: 1.5rem;
-    }
-    /*  */
-    /* HEADER */
-    /*  */
-    .header{
-        flex-direction: column;
-        align-items: center;
-    }
-    /*  */
-    /* FOOTER */
-    /*  */
-    .footer{
-        flex-direction: column;
-        gap: 10px;
-    }
-    /*  */
-    /* HOME */
-    /*  */
-    .hero{
-        flex-direction: column;
-    }
-    .cards{
-        gap: 25px;
-    }
-    .cultura-contenido{
-        border-radius: 25px;
-        padding: 15px;
-        flex-direction: column;
-    }
-    .cultura-contenido img{
-        width: 100%;
-    }
-    /*  */
-    /* BARILOCHE */
-    /*  */
-    .bari-grid{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .flip{
-        height: 50vh;
-    }
-    /*  */
-    /* JUJUY */
-    /*  */
-    .jujuy{
-        background-size: cover;
-    }
-    .mercado{
-        height: 150vh;
-        background-size: cover;
-    }
-    .j-flex{
-        flex-direction: column;
-        gap: 25px;
-    }
-    .j-card{
-        width: 100%;
-    }
-    /*  */
-    /* SOBRE NOSOTROS */
-    /*  */
-    .grid-text, .grid-img{
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        align-items: center;
-    }
-    .grid-text p{
-        padding: 0 25px;
-    }
-    .img-about{
-        width: 75vw;
-    }
-    .banner{
-        display: none;
-    }
-    .img-grid{
-        width: 75vw;
-    }
+body {
+  background-color: #F1FAEE;
 }
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: Lobster, sans-serif;
+  color: #1D3557 !important;
+}
+body h1 {
+  font-size: 3rem;
+}
+body h2 {
+  font-size: 2.5rem;
+}
+body h3 {
+  font-size: 2rem;
+}
+body p {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 600;
+  color: #3D4856;
+  font-size: 1rem;
+}
+body main {
+  padding: 0 50px;
+}
+body ul {
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  color: #1D3557;
+  font-weight: 600;
+}
+body .whatsapp-flotante {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+body .whatsapp {
+  height: 5vh;
+  width: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+header .logo {
+  height: 10vh;
+  width: auto;
+}
+header .bg-plato-fuerte {
+  background-color: #F1FAEE;
+}
+header .navbar.bg-plato-fuerte > .container-fluid {
+  position: relative;
+}
+header .navbar.bg-plato-fuerte #navbarNav {
+  position: absolute;
+  top: 100%;
+  left: auto;
+  right: 0;
+  z-index: 1030;
+  width: max-content;
+  padding: 2rem;
+  background-color: transparent;
+}
+header .navbar.bg-plato-fuerte #navbarNav.show {
+  background-color: #F1FAEE;
+}
+header .active {
+  font-weight: bolder;
+}
+
+.j-main .jujuy, .j-main .mercado, main .bari {
+  width: 100%;
+  height: 70vh;
+  background-image: url(../../assets/bari/bariloche.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 0;
+}
+
+.j-main .jujuy .jjy-bg, .j-main .mercado .jjy-bg, main .bari .bari-bg {
+  width: fit-content;
+  background-color: rgba(241, 250, 238, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 0;
+  border-radius: 15px 15px 0 0;
+}
+.j-main .jujuy .jjy-bg h1, .j-main .mercado .jjy-bg h1, main .bari .bari-bg h1, .j-main .jujuy .jjy-bg h2, .j-main .mercado .jjy-bg h2, main .bari .bari-bg h2, .j-main .jujuy .jjy-bg p, .j-main .mercado .jjy-bg p, main .bari .bari-bg p {
+  color: #1D3557;
+}
+
+.footer {
+  background-color: #1D3557;
+  margin-top: 3rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+}
+.footer p {
+  color: #F1FAEE;
+  padding-bottom: 5px;
+  font-weight: 300;
+}
+.footer ul {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.footer ul .rrss {
+  height: 5vh;
+  width: auto;
+}
+@media (min-width: 300px) and (max-width: 567px) {
+  .footer {
+    flex-direction: column;
+    grid-area: 10px;
+  }
+}
+
+main .bari-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-areas: "head head" "choco cerv" "trucha cord";
+  gap: 50px;
+  justify-items: center;
+}
+main .bari-grid h2 {
+  grid-area: head;
+}
+main .bari-grid .a {
+  grid-area: choco;
+}
+main .bari-grid .b {
+  grid-area: cerv;
+}
+main .bari-grid .c {
+  grid-area: trucha;
+}
+main .bari-grid .d {
+  grid-area: cord;
+}
+main .bari-grid .bari-card {
+  width: 80%;
+  text-align: center;
+  border: 2px solid #C76D3A;
+  border-radius: 15px;
+}
+main .bari-grid .bari-card .flip {
+  width: 100%;
+  height: 40vh;
+  perspective: 1000px;
+}
+main .bari-grid .bari-card .flip:hover .inner {
+  transform: rotateY(180deg);
+}
+@media (min-width: 300px) and (max-width: 567px) {
+  main .bari-grid .bari-card .flip {
+    height: 50vh;
+  }
+}
+main .bari-grid .bari-card .flip .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+}
+main .bari-grid .bari-card .flip .inner .front, main .bari-grid .bari-card .flip .inner .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+}
+main .bari-grid .bari-card .flip .inner .front img, main .bari-grid .bari-card .flip .inner .back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .bari-grid .bari-card .flip .inner .back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #F1FAEE;
+  color: #3D4856;
+}
+@media (min-width: 300px) and (max-width: 567px) {
+  main .bari-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.j-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.j-main .jujuy {
+  background-image: url(../../assets/jujuy/jujuy.png);
+}
+.j-main .mercado {
+  margin: 50px 0;
+  background-image: url(../../assets/jujuy/mercado.webp);
+  background-size: cover;
+}
+.j-main .mercado .jjy-bg {
+  padding: 10px;
+}
+.j-main .j-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+}
+.j-main .j-flex .j-card {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 0;
+}
+.j-main .j-flex .j-card .j-img {
+  border-radius: 25px;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 300px) and (max-width: 567px) {
+  .j-main .jujuy {
+    background-size: cover;
+  }
+  .j-main .mercado {
+    height: 150vh;
+  }
+  .j-main .j-flex {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .j-main .j-flex .j-card {
+    width: 100%;
+  }
+}
+
+.main-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 25px;
+}
+.main-us .grid-text {
+  display: grid;
+  grid-template-areas: "img1 ." "img1 sub1" "img1 p1" "img1 ." "sub2 img2" "p2 img2" "sub3 img2" "p3 img2" "img3 ." "img3 sub4" "img3 p4" "img3 ." "img4 img4";
+  justify-items: center;
+  align-items: center;
+  row-gap: 20px;
+  column-gap: 40px;
+  text-align: center;
+}
+.main-us .grid-text p {
+  padding: 0 75px;
+  font-size: 1.25rem;
+}
+.main-us .grid-text .img-about {
+  width: 35vw;
+  height: auto;
+  border-radius: 25px;
+}
+.main-us .grid-text .banner {
+  width: 100%;
+}
+.main-us .grid-text .img-us-grid {
+  grid-area: img1;
+}
+.main-us .grid-text .subtitle-trip {
+  grid-area: sub1;
+}
+.main-us .grid-text .p-story {
+  grid-area: p1;
+}
+.main-us .grid-text .img-1-grid {
+  grid-area: img2;
+}
+.main-us .grid-text .subtitle-filo {
+  grid-area: sub2;
+}
+.main-us .grid-text .p-culture {
+  grid-area: p2;
+}
+.main-us .grid-text .subtitle-diference {
+  grid-area: sub3;
+}
+.main-us .grid-text .p-offering {
+  grid-area: p3;
+}
+.main-us .grid-text .img-2-grid {
+  grid-area: img3;
+}
+.main-us .grid-text .subtitle-inv {
+  grid-area: sub4;
+}
+.main-us .grid-text .p-end {
+  grid-area: p4;
+}
+.main-us .grid-text .img-3-grid {
+  grid-area: img4;
+}
+.main-us .grid-img {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  align-items: center;
+  column-gap: 100px;
+  row-gap: 25px;
+}
+.main-us .grid-img .img-grid {
+  width: 25vw;
+  height: auto;
+  border-radius: 25px;
+}
+.main-us .grid-img {
+  /* FILA 1 */
+}
+.main-us .grid-img .bsas {
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+.main-us .grid-img .cafe {
+  grid-row: 1/3;
+  grid-column: 3/5;
+}
+.main-us .grid-img .mza {
+  grid-row: 1/3;
+  grid-column: 5/7;
+}
+.main-us .grid-img {
+  /* FILA 2 */
+}
+.main-us .grid-img .emp {
+  grid-row: 3/5;
+  grid-column: 1/3;
+}
+.main-us .grid-img .glogo {
+  grid-row: 3/5;
+  grid-column: 3/5;
+}
+.main-us .grid-img .asado {
+  grid-row: 3/5;
+  grid-column: 5/7;
+}
+.main-us .grid-img {
+  /* FILA 3 */
+}
+.main-us .grid-img .jujuy {
+  grid-row: 5/7;
+  grid-column: 1/3;
+}
+.main-us .grid-img .choco {
+  grid-row: 5/7;
+  grid-column: 3/5;
+}
+.main-us .grid-img .bar {
+  grid-row: 5/7;
+  grid-column: 5/7;
+}
+@media (min-width: 300px) and (max-width: 567px) {
+  .main-us .grid-text, .main-us .grid-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 25px;
+  }
+  .main-us .grid-text p {
+    padding: 0 25px;
+  }
+  .main-us .grid-text .img-about {
+    width: 75vw;
+  }
+  .main-us .grid-text .banner {
+    display: none;
+  }
+  .main-us .grid-img .img-grid {
+    width: 75vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

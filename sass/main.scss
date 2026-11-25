@@ -1,0 +1,11 @@
+// sass --watch sass/main.scss style/style.css
+// PARTIALS
+@use "./utilities/reset";
+
+@use "./layout/header";
+@use "./layout/footer";
+
+@use "./components/bari";
+@use "./components/jujuy";
+@use "./components/nosotros";
+@use "./components/contacto";

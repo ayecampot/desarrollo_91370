@@ -1,0 +1,41 @@
+@use "./variables" as v;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: v.$bg-ppal;
+    h1, h2, h3, h4, h5, h6{
+        font-family: v.$font-ppal;
+        color: v.$headings !important;
+    }
+    h1{font-size: 3rem;}
+    h2{font-size: 2.5rem;}
+    h3{font-size: 2rem;}
+    p{
+        font-family: v.$font-sec !important;
+        font-weight: 600;
+        color: v.$text;
+        font-size: 1rem;
+    }
+    main{padding: 0 50px;}
+    ul{list-style: none;}
+    a{
+        text-decoration: none;
+        font-family: v.$font-sec;
+        color: v.$headings;
+        font-weight: 600;
+    }
+    .whatsapp-flotante{
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 1000;
+    }
+    .whatsapp{
+        height: 5vh;
+        width: auto;
+    }
+}

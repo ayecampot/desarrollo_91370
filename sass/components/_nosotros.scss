@@ -1,0 +1,113 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.main-us{
+    @include m.flex(column,start,center,25px);
+    .grid-text{
+        display: grid;
+        grid-template-areas:
+        "img1 ." 
+        "img1 sub1" 
+        "img1 p1" 
+        "img1 ." 
+        "sub2 img2" 
+        "p2 img2" 
+        "sub3 img2" 
+        "p3 img2" 
+        "img3 ." 
+        "img3 sub4" 
+        "img3 p4" 
+        "img3 ." 
+        "img4 img4" 
+        ;
+        justify-items: center;
+        align-items: center;
+        row-gap: 20px;
+        column-gap: 40px;
+        text-align: center;
+        p{
+            padding: 0 75px;
+            font-size: 1.25rem;
+        }
+        .img-about{
+            width: 35vw;
+            height: auto;
+            border-radius: 25px;
+        }
+        .banner{width: 100%;}
+        .img-us-grid{grid-area: img1;}
+        .subtitle-trip{grid-area: sub1;}
+        .p-story{grid-area: p1;}
+        .img-1-grid{grid-area: img2;}
+        .subtitle-filo{grid-area: sub2;}
+        .p-culture{grid-area: p2;}
+        .subtitle-diference{grid-area: sub3;}
+        .p-offering{grid-area: p3;}
+        .img-2-grid{grid-area: img3;}
+        .subtitle-inv{grid-area: sub4;}
+        .p-end{grid-area: p4;}
+        .img-3-grid{grid-area: img4;}
+    }
+    .grid-img{
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        justify-items: center;
+        align-items: center;
+        column-gap: 100px;
+        row-gap: 25px;
+        .img-grid{
+            width: 25vw;
+            height: auto;
+            border-radius: 25px;
+        }
+        /* FILA 1 */
+        .bsas{
+            grid-row: 1 / 3;
+            grid-column: 1 / 3;
+        }
+        .cafe{
+            grid-row: 1 / 3;
+            grid-column: 3 / 5;
+        }
+        .mza{
+            grid-row: 1 / 3;
+            grid-column: 5 / 7;
+        }
+        /* FILA 2 */
+        .emp{
+            grid-row: 3 / 5;
+            grid-column: 1 / 3;
+        }
+        .glogo{
+            grid-row: 3 / 5;
+            grid-column: 3 / 5;
+        }
+        .asado{
+            grid-row: 3 / 5;
+            grid-column: 5 / 7;
+        }
+        /* FILA 3 */
+        .jujuy{
+            grid-row: 5 / 7;
+            grid-column: 1 / 3;
+        }
+        .choco{
+            grid-row: 5 / 7;
+            grid-column: 3 / 5;
+        }
+        .bar{
+            grid-row: 5 / 7;
+            grid-column: 5 / 7;
+        }
+    }
+    @include m.mobile{
+        .grid-text, .grid-img{@include m.flex(column,start,center,25px);}
+        .grid-text{
+            p{padding: 0 25px;}
+            .img-about{width: 75vw;}
+            .banner{display: none;}
+        } 
+        .grid-img{.img-grid{width: 75vw;}}
+    }
+}
